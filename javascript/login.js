@@ -53,7 +53,7 @@ const loginUser = async (username, password) => {
     }
     document.querySelector("#login").innerHTML = "success";
     setCookie(result.message.user, result.token);
-    window.location.replace("/dashboard.html");
+    window.location.replace("dashboard.html");
   } catch (err) {
     document.querySelector(".errMessage").innerHTML = err.message;
     document.querySelector("#login").innerHTML = "try again";
