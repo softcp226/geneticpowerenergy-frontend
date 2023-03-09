@@ -66,8 +66,9 @@ const shape_result = (referrals) => {
   let user = getCookie("user");
   try {
     const response = await fetch(
-      // "https://softjovial-backend.glitch.me/api/user/referral/fetch",
-      "http://localhost:5000/api/user/referral/fetch",
+      // "http://localhost:5000/api/user/referral/fetch", 
+       "https://saxoenergy-backend.glitch.me/api/user/referral/fetch",
+
       {
         method: "POST",
         headers: { "content-type": "application/json" },

@@ -40,8 +40,8 @@ const submit_userForm = async (form) => {
   try {
     document.querySelector("#register").innerHTML = "Proccessing...";
     const response = await fetch(
-    //   "https://bristolenergy.glitch.me/api/newuser/register",
-      "http://localhost:5000/api/newuser/register",
+      "https://saxoenergy-backend.glitch.me/api/newuser/register",
+      // "http://localhost:5000/api/newuser/register",
 
       {
         method: "POST",
