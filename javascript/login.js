@@ -8,7 +8,7 @@ function setCookie(user, token) {
   document.cookie = `user=${user} ; ${expires}`;
   document.cookie = `token=${token} ; ${expires}`;
 
-  window.location.replace("/dashboard.html");
+  window.location.replace("dashboard.html");
 }
 const show_input_error = (input) => {
   input.style.border = "2px solid red";
