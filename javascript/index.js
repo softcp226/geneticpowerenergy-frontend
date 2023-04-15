@@ -20,14 +20,16 @@ const setText = (investment_package) => {
     const plan_container_div = document.createElement("div");
     const container_div = document.createElement("div");
 
-    plan_container_div.className = "live-auction-box wow fadeInUp";
+    plan_container_div.className = "col-lg-4";
     container_div.style.padding = "22px";
     const package_name = document.createElement("h1");
     package_name.innerHTML = investment_package.package_name;
 
     const package_ul = document.createElement("ul");
-    const package_min_li = document.createElement("li");
-    const package_max_li = document.createElement("li");
+    const package_min_li = document.createElement("span");
+    const package_max_li = document.createElement("span");
+    package_min_li.style.fontSize="20px"
+    package_max_li.style.fontSize="20px"
     const package_return_li = document.createElement("li");
     const package_return_li_b = document.createElement("b");
     const package_principal_li = document.createElement("li");
@@ -46,9 +48,12 @@ const setText = (investment_package) => {
     package_instant_li.innerHTML = "INSTANT WITHDRAWAL";
     const package_btn = document.createElement("a");
     package_btn.href = "register.html";
-    package_btn.className = "btn btn-default";
+    // package_btn.className = "btn btn-default";
     package_btn.innerHTML = "Get Started";
-    package_btn.style.margin="4px"
+    const main_blue_button_hover=document.createElement("div")
+    main_blue_button_hover.className = "main-blue-button-hover";
+    main_blue_button_hover.append(package_btn)
+    // package_btn.style.margin="4px"
     // package_return_li.innerHTML=;
     package_ul.append(
       package_min_li,
@@ -56,7 +61,7 @@ const setText = (investment_package) => {
       package_return_li,
       package_principal_li,
       package_instant_li,
-      package_btn,
+      main_blue_button_hover
     );
     plan_container_div.append(container_div);
     container_div.append(package_name, package_ul);
@@ -64,7 +69,7 @@ const setText = (investment_package) => {
 // plan_container_div.style.width = "264.8px";
 // plan_container_div.style.marginRight = "30px";
 
-container_div.className="live-auction-box wow fadeInUp delay-2 animated"
+container_div.className = "item first-item delay-2 animated";
 container_div.style.visibility="visible"
 // class="live-auction-box wow fadeInUp delay-2 animated"
 //                                             style="visibility: visible;"
